@@ -658,7 +658,7 @@ try:
 
                 if payload_file:
                     try:
-                        with open(payload_file, "r") as file:
+                        with open(payload_file, "r", encoding="utf8") as file:
                             payloads = [line.strip() for line in file if line.strip()]
                             if not payloads:
                                 raise ValueError("Payload file is empty.")
